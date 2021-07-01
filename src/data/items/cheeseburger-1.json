@@ -1,0 +1,7 @@
+{
+  "title": "Cheeseburger",
+  "description": "Choice of cheese, lettuce, tomato, onion, garlic aioli, brioche bun",
+  "price": 11,
+  "image": "",
+  "modifiers": ["burger-sides", "sauces"]
+}

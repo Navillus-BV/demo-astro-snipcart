@@ -1,0 +1,21 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Header from "../components/Header.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <MainHead />
+    </head>
+    <body>
+        <Header />
+
+        <main>
+            <slot />
+        </main>
+
+        <script async="async" src="https://cdn.snipcart.com/themes/v3.0.21/default/snipcart.js"></script>
+        <div hidden="hidden" id="snipcart" data-api-key="MTlhZGUxOTktODQyOS00NmU4LTllOWMtM2VhNjIzMjJiYjljNjM3MzMxODU2MjU4MTYzMDI2"></div>
+    </body>
+</html>

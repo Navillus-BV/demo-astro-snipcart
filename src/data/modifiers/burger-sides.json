@@ -1,0 +1,18 @@
+{
+  "options": [
+    {
+      "price": 0,
+      "title": "French Fries"
+    },
+    {
+      "price": 1.5,
+      "title": "Onion Rings"
+    },
+    {
+      "price": 2,
+      "title": "Mixed Vegetables"
+    }
+  ],
+  "title": "Burger Sides",
+  "display_title": "Sides"
+}

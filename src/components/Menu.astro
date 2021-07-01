@@ -1,0 +1,14 @@
+---
+import MenuCategory from "./MenuCategory.astro";
+import { loadMenu } from '../utils/loadMenu';
+
+const { menu, url }: Props = Astro.props;
+---
+
+<div data-title={menu.title}>
+    <div class="menu">
+        {menu.categories.map(category => (
+            <MenuCategory category={category} url={url} />
+        ))}
+    </div>
+</div>

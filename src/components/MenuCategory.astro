@@ -1,0 +1,19 @@
+---
+import MenuItem from './MenuItem.astro';
+
+const { category, url }: Props = Astro.props;
+---
+
+<div class={`category ${category.featured ? 'category--featured' : ''}`}>
+    <div class="category__title">{category.display_title || category.title}</div>
+
+    {category.description && (
+        <div class="category__description">{category.description}</div>
+    )}
+
+    <ul class="category__list">
+        {category.items.map(item => (
+            <MenuItem item={item} url={url} />
+        ))}
+    </ul>
+</div>

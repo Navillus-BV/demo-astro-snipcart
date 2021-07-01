@@ -1,0 +1,7 @@
+{
+  "title": "Bama Burger",
+  "description": "Bacon, pepper jack cheese, fried Tabasco onions, BBQ sauce, garlic aioli, brioche bun",
+  "price": 13,
+  "image": "/items/bama-burger.jpg",
+  "modifiers": ["burger-sides", "sauces"]
+}

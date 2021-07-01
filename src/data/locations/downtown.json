@@ -1,0 +1,10 @@
+{
+  "theme": "light",
+  "title": "Downtown",
+  "logo": "/uploads/locations/logo.svg",
+  "accent": "#005581",
+  "display_title": "",
+  "description": "Demo restuarant for Kamfly.io",
+  "menus": ["dockside", "upstairs"],
+  "snipcart": "MTlhZGUxOTktODQyOS00NmU4LTllOWMtM2VhNjIzMjJiYjljNjM3MzMxODU2MjU4MTYzMDI2"
+}

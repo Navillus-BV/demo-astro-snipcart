@@ -1,0 +1,7 @@
+{
+  "title": "Fisher's Burger",
+  "description": "Pimento cheese, bacon, smoked tomato jam, brioche bun",
+  "price": 13,
+  "image": "",
+  "modifiers": ["burger-sides", "sauces"]
+}

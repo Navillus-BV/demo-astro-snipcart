@@ -1,0 +1,12 @@
+{
+  "title": "Burgers",
+  "display_title": "",
+  "description": "",
+  "featured": false,
+  "items": [
+    "cheeseburger-1",
+    "captain-s-burger",
+    "bama-burger",
+    "fisher-s-burger"
+  ]
+}

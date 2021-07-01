@@ -1,0 +1,7 @@
+{
+  "title": "Captain's Burger",
+  "description": "Smoked pork, sliced pickles, pepper jack, lettuce, tomato, onion, garlic aioli, brioche bun",
+  "price": 13,
+  "image": "",
+  "modifiers": ["burger-sides", "sauces"]
+}

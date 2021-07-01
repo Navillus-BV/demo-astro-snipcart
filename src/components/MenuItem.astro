@@ -1,0 +1,41 @@
+---
+const { item, url } = Astro.props;
+
+const modifiersMap = item.modifiers.reduce((acc, next, i) => {
+    acc[`data-item-custom${i}-name`] = next.display_title || next.title
+    acc[`data-item-custom${i}-options`] = next.options.map(
+        ({ title, price }) =>
+            price == 0 ? title : `${title} (+${price})[+${price}]`
+        )
+        .join('|')
+    return acc
+}, {});
+---
+
+<li class={`menuitem ${!item.description && !item.price ? 'menuitem--basic' : ''}`}>
+    {item.image && (
+        <img class="menuitem__image" src={item.image} alt={item.display_title || item.title} />
+    )}
+
+    <div class="menuitem__title">{item.display_title || item.title}</div>
+
+    {item.description && (
+        <div class="menuitem__description">{item.description}</div>
+    )}
+
+    {item.price && (
+        <div class="menuitem__price">{item.price}</div>
+    )}
+
+        <button
+            class="menuitem__cartbtn snipcart-add-item"
+            data-item-id={item.slug}
+            data-item-name={item.display_title || item.title}
+            data-item-price={item.price}
+            data-item-url={url}
+            data-item-image={item.image}
+            {...modifiersMap}
+        >
+            <img class="menuitem__cart" src="/icons/add-to-basket.svg" alt="add to cart" />
+        </button>
+</li>
