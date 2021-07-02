@@ -16,7 +16,7 @@ const modifiersMap = item.modifiers.reduce((acc, next, i) => {
 
 <li class={`menuitem ${!item.description && !item.price ? 'menuitem--basic' : ''}`}>
     {item.image && (
-        <img class="menuitem__image" src={item.image} alt={item.display_title || item.title} />
+        <img loading="lazy" class="menuitem__image" src={item.image} alt={item.display_title || item.title} />
     )}
 
     <div class="menuitem__title">{item.display_title || item.title}</div>
