@@ -1,12 +1,14 @@
 ---
 const { item, url } = Astro.props;
 
+function parseModifierOption({ title, price }) {
+    return price === 0 ? title : `${title} (+${price})[+${price}]`
+}
+
 const modifiersMap = item.modifiers.reduce((acc, next, i) => {
     acc[`data-item-custom${i}-name`] = next.display_title || next.title
-    acc[`data-item-custom${i}-options`] = next.options.map(
-        ({ title, price }) =>
-            price == 0 ? title : `${title} (+${price})[+${price}]`
-        )
+    acc[`data-item-custom${i}-options`] = next.options
+        .map(parseModifierOption)
         .join('|')
     return acc
 }, {});

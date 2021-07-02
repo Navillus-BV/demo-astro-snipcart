@@ -3,9 +3,13 @@ import Layout from "../layouts/main.astro";
 import Menu from "../components/Menu.astro";
 import { loadMenu } from "../utils/loadMenu";
 
-const menu = await loadMenu("dockside");
+const dockside = await loadMenu("dockside");
+const upstairs = await loadMenu("upstairs");
 ---
 
 <Layout>
-    <Menu menu={menu} url={Astro.request.canonicalURL.href} />
+    <div class="pivot">
+        <Menu menu={dockside} url={Astro.request.canonicalURL.href} />
+        <Menu menu={upstairs} url={Astro.request.canonicalURL.href} />
+    </div>
 </Layout>
